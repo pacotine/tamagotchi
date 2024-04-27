@@ -21,6 +21,7 @@ main {
 
 header h1 {
    font: small-caps bold 250%/1 sans-serif;
+   text-align: center;
    color: #333;
 }
 
@@ -44,7 +45,7 @@ hr {
    background-color: #aa9d9d;
 }
 
-a {
+a:not(.except) {
     display: inline-block;
    margin: 10px auto;
    padding: 10px 20px;
@@ -102,6 +103,15 @@ p{
    padding:5%;
 }
 
+footer span {
+	padding:1%;
+}
+
+footer img {
+ 	width: 40px; 
+ 	vertical-align: middle;
+}
+
 .container a {
    display: flex;
    justify-content: center;
@@ -150,7 +160,7 @@ p{
 
 .navigation a:hover {
    background-color: #f3e296;
-   color: #fff;
+   color: #000;
 }
 
 @media screen and (max-width: 600px) {
