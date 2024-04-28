@@ -148,7 +148,7 @@ footer img {
    color: #776c3c;
    font-family: small-caps;
    align-items: center;
-   font-size: 17px;
+   font-size: 16px;
    border-radius: 0px;
    margin: 0;
    width: 110px;
@@ -166,6 +166,10 @@ footer img {
 @media screen and (max-width: 600px) {
     main {
         padding: 10px;
+    }
+    
+    .navigation a {
+    	font-size: 12px;
     }
 }
 
