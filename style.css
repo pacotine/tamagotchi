@@ -169,6 +169,7 @@ footer img {
     }
     
     .navigation a {
+    	width: 50px;
     	font-size: 12px;
     }
 }
