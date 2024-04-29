@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EntityCreatorActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCapy"
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/create_tamagotchi" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/create_your_new_tamagotchi"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineCapy" />
+
+
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_textbg"
+                android:maxLength="35"
+                android:elevation="20dp"
+                android:ems="10"
+                android:hint="@string/tamagotchi_s_name"
+                android:inputType="text"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextHouseName"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineEditTextTop"
+                />
+
+
+            <EditText
+                android:id="@+id/editTextHouseName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_textbg"
+                android:elevation="20dp"
+                android:ems="10"
+                android:maxLength="35"
+                android:hint="@string/tamagotchi_s_house_name"
+                android:inputType="text"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/guidelineEditTextBottom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#7792F4"
+                android:textSize="17sp"
+                android:text="@string/create_the_tamagotchi"
+                app:layout_constraintBottom_toBottomOf="@id/guidelineButtonBottom"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guidelineButtonTop" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCapy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEditTextTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.42" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEditTextBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.76" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineButtonTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineButtonBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <!-- Outline -->
+
+    <View
+        android:id="@+id/rectangleTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangleBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineBottom" />
+
+    <View
+        android:id="@+id/rectangleLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangleRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Guidelines -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

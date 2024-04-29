@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainMenuActivity">
+
+
+    <ImageView
+        android:id="@+id/road"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/road"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/house1Image"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guidelineVertMiddleLeft"
+        app:layout_constraintTop_toTopOf="@id/guideline1Top"
+        tools:srcCompat="@drawable/house_alive" />
+
+    <TextView
+        android:id="@+id/house1Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:gravity="center"
+        android:layout_marginTop="-15dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1TextBottom"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineTextLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineTextMiddleLeft"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        tools:text="house 1" />
+
+    <ImageButton
+        android:id="@+id/house2Image"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVertMiddleRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTextMiddleTop"
+        tools:srcCompat="@drawable/house_alive" />
+
+    <TextView
+        android:id="@+id/house2Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:gravity="center"
+        android:layout_marginTop="-15dp"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextMiddleTop"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2TextBottom"
+        app:layout_constraintRight_toRightOf="@id/guidelineTextRight"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineTextMiddleRight"
+        tools:text="house 2" />
+
+    <ImageButton
+        android:id="@+id/house3Image"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextMiddleTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTextBottomTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guidelineVertMiddleLeft"
+        tools:srcCompat="@drawable/house_empty" />
+
+
+
+    <TextView
+        android:id="@+id/house3Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:gravity="center"
+        android:layout_marginTop="-15dp"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineTextLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineTextMiddleLeft"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextBottomTop"
+        app:layout_constraintBottom_toBottomOf="@id/guideline3TextBottom"
+        tools:text="house 3" />
+
+    <ImageButton
+        android:id="@+id/house4Image"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVertMiddleRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextBottomTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+        tools:srcCompat="@drawable/house_empty" />
+
+    <TextView
+        android:id="@+id/house4Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:gravity="center"
+        android:layout_marginTop="-15dp"
+        app:layout_constraintRight_toRightOf="@id/guidelineTextRight"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineTextMiddleRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineBottom"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4TextBottom"
+        tools:text="house 4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertMiddleLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertMiddleRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1Top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1TextBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextMiddleTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2TextBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextBottomTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3TextBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.71" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4TextBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextMiddleLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextMiddleRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

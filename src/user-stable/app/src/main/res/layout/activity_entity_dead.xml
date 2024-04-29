@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    tools:context=".activities.EntityDeadActivity"
+    android:background="#F4E6D1">
+
+    <ImageView
+        android:id="@+id/deadPicture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintBottom_toTopOf="@id/guideline_picture_bottom"
+        android:src="@drawable/dead"/>
+
+    <TextView
+        android:id="@+id/dateOfDeath"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_letter_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_letter_right"
+        app:layout_constraintBottom_toTopOf="@id/guideline_picture_bottom"
+        android:fontFamily="@font/booble_boddy"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="your tamagotchi is dead"/>
+
+    <TextView
+        android:id="@+id/death_certificate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/old_london"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_death_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_death_right"
+        android:text="Death Certificate"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/guideline_picture_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_death_top"/>
+
+
+
+    <TextView
+        android:id="@+id/death"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/libre_bodoni"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_death_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_death_top"
+        android:layout_marginTop="20dp"
+        tools:text="Death type" />
+
+    <TextView
+        android:id="@+id/found_letter"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/libre_bodoni"
+        android:text="@string/found_letter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_letter_top"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_found_top"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+    <ImageView
+        android:id="@+id/letter"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/letter"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_letter_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_letter_right"
+        app:layout_constraintTop_toBottomOf="@id/found_letter"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_letter_bottom"
+        android:src="@drawable/letter" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_death_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_death_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_picture_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_letter_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_letter_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_letter_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_letter_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_death_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_death_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_found_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

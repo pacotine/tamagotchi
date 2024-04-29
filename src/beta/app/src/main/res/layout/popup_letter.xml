@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/instructions_popup"
+    android:layout_width="350dp"
+    android:layout_height="600dp"
+    android:layout_gravity="center"
+    tools:context=".activities.EntityDeadActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/letter_background"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/letterText"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10dp"
+        android:scrollbars="vertical"
+        android:lineSpacingExtra="10sp"
+        android:text="Text View"
+        android:textSize="20sp"
+        android:fontFamily="@font/free_shrimp_medium"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <ImageButton
+        android:id="@+id/closeLetter"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingRight="25dp"
+        android:contentDescription="@string/close_letter"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineButton"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

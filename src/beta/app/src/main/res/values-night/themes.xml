@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!-- CAUTION: the dark theme is set to light during development -->
+    <style name="Base.Theme.Tamagotchi" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

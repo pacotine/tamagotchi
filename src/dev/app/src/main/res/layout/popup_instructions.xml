@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/instructions_popup"
+    android:layout_width="350dp"
+    android:layout_height="500dp"
+    android:layout_gravity="center"
+    tools:context=".fragments.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/instructions_bg"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/closePopup"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/close_popup"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineButton"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        android:text="How to take care of your Tamagotchi :"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineText"
+        app:layout_constraintRight_toRightOf="@id/guidelineButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineText"
+        app:layout_constraintRight_toRightOf="@id/guidelineButton"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

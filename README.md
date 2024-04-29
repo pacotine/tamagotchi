@@ -7,7 +7,7 @@ Welcome to the Tamagotchi project repository!
 
 1. **Clone the Repository**: 
    - Clone the repository using `git clone https://github.com/pacotine/tamagotchi.git`.
-   - Access the source folder for the version of your choice.
+   - Access the source folder for the version of your choice in `src/`.
 
 2. **Configure the Project**:
    - Add a `local.properties` file at the root of the project if not already present. Declare the variable that points to the path to your SDK (`sdk.dir=path/to/your/SDK`).
@@ -37,3 +37,9 @@ Welcome to the Tamagotchi project repository!
   
 5. **Launch the Application**: 
    - Once the application is installed, you can launch it.
+   
+## 📂 Documentation
+
+The documentation is present in the source code in the 3 versions of the `src/` folder.
+
+You can also find the Javadoc generated in the `doc/` folder or directly on the site by clicking on *Javadoc*.

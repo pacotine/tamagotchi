@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HygieneFragment"
+    android:id="@+id/hygiene_layout">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/shower_background"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/showerButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintRight_toLeftOf="@id/guidelineRightShower"
+            app:layout_constraintTop_toBottomOf="@id/guidelineButtonTop"
+            app:layout_constraintBottom_toTopOf="@id/guidelineBottomSoap"
+            app:layout_constraintDimensionRatio="1:1"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:src="@drawable/shower"
+            android:contentDescription="@string/shower"/>
+
+        <ProgressBar
+            android:id="@+id/hygiene_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:indeterminateOnly="false"
+            android:max="500"
+            android:progressDrawable="@drawable/pb_line"
+            app:layout_constraintBottom_toBottomOf="@id/guidelinePBBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guidelinePBTop"
+            tools:progress="380" />
+
+        <ImageView
+
+            android:id="@+id/image_view_hygiene"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/tamagotchi_is_happy"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineCapyBottom"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+            app:layout_constraintRight_toRightOf="@id/guidelineRight"
+            app:layout_constraintTop_toTopOf="@id/guidelineCapyTop"
+            tools:srcCompat="@drawable/normal" />
+
+        <ImageView
+            android:id="@+id/soap"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/soap"
+            app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/guidelineLeftSoap"
+            app:layout_constraintTop_toBottomOf="@id/guidelineTopSoap"
+            android:contentDescription="@string/soap"/>
+
+        <ProgressBar
+            android:id="@+id/washing_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:indeterminateOnly="false"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/soap"
+            tools:max="10000"
+            tools:progress="1000" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCapyTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCapyBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.73" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopSoap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.73" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottomSoap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeftSoap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRightShower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.83" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/rightBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/leftBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/bottomBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/topBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineButtonTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.70" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinePBTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinePBBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

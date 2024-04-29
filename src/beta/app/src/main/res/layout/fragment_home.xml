@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment"
+    android:id="@+id/home_layout">
+
+    <!-- TODO: add guidelines and layout constraint -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@id/guidelineNameTextTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineNameTextBottom"
+        app:layout_constraintRight_toRightOf="@id/guidelineCapyRight"
+        >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/booble_boddy"
+            android:gravity="end|center"
+            android:autoSizeTextType="uniform"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/houseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/booble_boddy"
+            android:gravity="right|center"
+            android:layout_gravity="end"
+            android:text="(house name)" />
+
+    </LinearLayout>
+
+    <!-- Hunger progress bar, animations and text -->
+
+    <ProgressBar
+
+        android:id="@+id/hunger_progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateOnly="false"
+        android:max="500"
+        android:progress="500"
+        android:progressDrawable="@drawable/progress_drawable_hunger"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@id/guidelineCenterTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenterRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenterRR"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextTop" />
+
+    <ImageView
+
+        android:id="@+id/image_view_hunger"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/tamagotchi_is_happy"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCapyCenterTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCapyCenterRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineCapyCenterRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineCapyTop"
+        tools:srcCompat="@drawable/normal" />
+
+    <TextView
+        android:id="@+id/text_view_hunger"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:gravity="center"
+        android:text="🍽️"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTextTop"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCenterRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineCenterRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <!-- Health progress bar, animations and text -->
+
+    <ProgressBar
+
+        android:id="@+id/health_progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateOnly="false"
+        android:max="500"
+        android:progress="500"
+        android:progressDrawable="@drawable/progress_drawable_normal"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@id/guidelineCenterTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCenterLeft"
+        app:layout_constraintRight_toLeftOf="@id/guidelineCenterLL"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextTop" />
+
+    <ImageView
+
+        android:id="@+id/image_view_health"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/tamagotchi_is_happy"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCapyCenterTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCapyCenterLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineCapyCenterLL"
+        app:layout_constraintTop_toTopOf="@id/guidelineCapyTop"
+        tools:srcCompat="@drawable/normal" />
+
+    <TextView
+
+        android:id="@+id/text_view_health"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/health_progress_bar"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:textSize="15sp"
+        android:text="💊"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTextTop"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCenterLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineCenterLL"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+
+    <!-- Fatigue progress bar, animations and text -->
+
+    <ProgressBar
+
+        android:id="@+id/fatigue_progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateOnly="false"
+        android:max="500"
+        android:progress="500"
+        android:progressDrawable="@drawable/progress_drawable_normal"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCenterBB"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextCenter" />
+
+    <ImageView
+
+        android:id="@+id/image_view_fatigue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/tamagotchi_is_happy"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCapyCenterBB"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCapyRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineCapyRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineCapyCenterTT"
+        tools:srcCompat="@drawable/normal" />
+
+    <TextView
+
+        android:id="@+id/text_view_fatigue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:text="💤"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTextCenter"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineCenterTT" />
+
+    <!-- Hygiene progress bar, animations and text -->
+
+    <ProgressBar
+
+        android:id="@+id/hygiene_progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateOnly="false"
+        android:max="500"
+        android:progress="500"
+        android:progressDrawable="@drawable/progress_drawable_normal"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCenterBB"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineLL"
+        app:layout_constraintTop_toTopOf="@id/guidelineTextCenter" />
+
+    <ImageView
+
+        android:id="@+id/image_view_hygiene"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/tamagotchi_is_happy"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCapyCenterBB"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCapyLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineCapyLL"
+        app:layout_constraintTop_toTopOf="@id/guidelineCapyCenterTT"
+        tools:srcCompat="@drawable/normal" />
+
+    <TextView
+
+        android:id="@+id/text_view_hygiene"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/hygiene_progress_bar"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:textSize="15sp"
+        android:text="🧼🛁"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTextCenter"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineLL"
+        app:layout_constraintTop_toTopOf="@id/guidelineCenterTT" />
+
+    <!-- Entertainment progress bar, animations and text -->
+
+    <ProgressBar
+
+        android:id="@+id/entertainment_progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateOnly="false"
+        android:max="500"
+        android:progress="500"
+        android:progressDrawable="@drawable/progress_drawable_normal"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTextBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/guidelineCenterRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineCenterRight"
+        app:layout_constraintTop_toBottomOf="@id/guidelineCenterBottom" />
+
+    <ImageView
+
+        android:id="@+id/image_view_entertainment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/tamagotchi_is_happy"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCapyBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCapyCenterRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineCapyCenterRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineCapyCenterBottom"
+        tools:srcCompat="@drawable/normal" />
+
+    <TextView
+
+        android:id="@+id/text_view_entertainment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:text="🎮"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCenterRR"
+        app:layout_constraintRight_toRightOf="@id/guidelineCenterRight"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTextBottom" />
+
+    <!-- Sociability progress bar, animations and text -->
+
+    <ProgressBar
+
+        android:id="@+id/sociability_progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateOnly="false"
+        android:max="500"
+        android:progress="500"
+        android:progressDrawable="@drawable/progress_drawable_normal"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTextBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCenterLeft"
+        app:layout_constraintRight_toLeftOf="@id/guidelineCenterLL"
+        app:layout_constraintTop_toBottomOf="@id/guidelineCenterBottom" />
+
+    <ImageView
+
+        android:id="@+id/image_view_sociability"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/tamagotchi_is_happy"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineCapyBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCapyCenterLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineCapyCenterLL"
+        app:layout_constraintTop_toTopOf="@id/guidelineCapyCenterBottom"
+        tools:srcCompat="@drawable/normal" />
+
+    <TextView
+
+        android:id="@+id/text_view_sociability"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/booble_boddy"
+        android:text="👥"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCenterLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineCenterLL"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTextBottom" />
+
+    <!-- Main Tamagotchi's animation -->
+
+    <ImageView
+        android:id="@+id/image_view_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/tamagotchi_is_happy"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMainBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineMainLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineMainRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineMainTop"
+        app:srcCompat="@drawable/normal" />
+
+    <!-- Information icon -->
+
+    <ImageButton
+        android:id="@+id/instructionsButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/information_icon"
+        style="?android:attr/borderlessButtonStyle"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@id/guidelineNameTextTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineNameTextBottom"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineCapyLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineCenterLeft"/>
+
+    <!-- Guidelines -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.005" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.995" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterRR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.345" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.655" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterTT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.405" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterBB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.605" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.435" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMainLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMainRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMainTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMainBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterRR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterTT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.465" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyCenterBB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.575" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.055" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.295" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.945" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCapyRR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.705" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineNameTextTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineNameTextBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

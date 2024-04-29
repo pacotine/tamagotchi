@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="day">#BADDEC</color>
+    <color name="night">#232665</color>
+    <color name="primary_day_color">#BDE8EF</color>
+    <color name="primary_night_color">#BBB8FF</color>
+    <color name="transparent">#00000000</color>
+
+</resources>
