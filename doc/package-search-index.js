@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.l2h1.tamagotchi.activities"},{"l":"com.l2h1.tamagotchi.fragments"},{"l":"com.l2h1.tamagotchi.model"},{"l":"com.l2h1.tamagotchi.model.listeners"},{"l":"com.l2h1.tamagotchi.model.states"},{"l":"com.l2h1.tamagotchi.utils"},{"l":"com.l2h1.tamagotchi.utils.json"}];updateSearchResults();

@@ -1,0 +1,7 @@
+com.l2h1.tamagotchi.activities
+com.l2h1.tamagotchi.fragments
+com.l2h1.tamagotchi.model
+com.l2h1.tamagotchi.model.listeners
+com.l2h1.tamagotchi.model.states
+com.l2h1.tamagotchi.utils
+com.l2h1.tamagotchi.utils.json
